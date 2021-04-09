@@ -1,0 +1,15 @@
+extend type Query{
+    units:[Unit!] @all
+}
+
+ extend type Mutation{
+    createUnit(name:String!):Unit @create @guard
+}
+
+
+type Unit{
+    id:ID
+    name:String
+
+}
+

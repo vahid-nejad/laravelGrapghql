@@ -1,0 +1,28 @@
+
+extend type Query {
+    products: [Product!] @all
+}
+extend type Mutation {
+    createProduct(input: createProductInput! @spread): Product @create @guard
+}
+
+input createProductInput{
+    name:String!
+    price:Int!
+    category:belongsToCategory!
+    unit:belongsToUnit!
+}
+input belongsToCategory {
+  connect: ID!
+}
+input belongsToUnit {
+  connect: ID!
+}
+
+type Product {
+    id: ID
+    name: String
+    price: Int
+    category: Category @belongsTo
+    unit: Unit @belongsTo
+}

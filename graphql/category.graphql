@@ -1,0 +1,12 @@
+ type Category {
+    id: ID
+    name: String
+    parent_id: ID
+}
+extend type Mutation {
+    createCategory(name: String!, parent_id: ID!): Category! @create @guard
+    # login(email: String!, password: String!): User! @field()
+}
+extend type Query{
+    categories: [Category!] @all
+}
