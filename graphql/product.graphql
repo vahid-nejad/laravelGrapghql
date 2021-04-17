@@ -3,11 +3,12 @@ extend type Query {
     products: [Product!] @all
 }
 extend type Mutation {
-    createProduct(input: createProductInput! @spread): Product @create @guard
+    createProduct(input: createProductInput! @spread): Product @create 
 }
 
 input createProductInput{
     name:String!
+    size:String!
     price:Int!
     category:belongsToCategory!
     unit:belongsToUnit!
@@ -22,7 +23,11 @@ input belongsToUnit {
 type Product {
     id: ID
     name: String
+    size: String
     price: Int
     category: Category @belongsTo
     unit: Unit @belongsTo
 }
+
+
+

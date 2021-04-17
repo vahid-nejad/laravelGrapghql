@@ -17,6 +17,6 @@ class Product extends Model
     }
     public function unit(): BelongsTo
     {
-        return $this->belongsTo(unit::class);
+        return $this->belongsTo(Unit::class);
     }
 }

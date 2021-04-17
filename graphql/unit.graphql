@@ -1,5 +1,5 @@
 extend type Query{
-    units:[Unit!] @all
+    units:[Unit!] @all @guard
 }
 
  extend type Mutation{

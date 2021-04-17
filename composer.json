@@ -17,7 +17,8 @@
         "laravel/passport": "^10.1",
         "laravel/tinker": "^2.5",
         "mll-lab/laravel-graphql-playground": "^2.5",
-        "nuwave/lighthouse": "^5.2"
+        "nuwave/lighthouse": "^5.2",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

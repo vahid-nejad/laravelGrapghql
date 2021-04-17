@@ -33,7 +33,9 @@ type Mutation {
 }
 
 
-
+type Subscription{
+    productUpdated: Product
+}
 
 extend type Mutation{
      uploadFile(file: Upload!): String
